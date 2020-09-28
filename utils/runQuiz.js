@@ -8,15 +8,14 @@ let wrongAnswers = 0;
 let userCorrect = false;
 let answer = '';
 
+//array of questions, their answers
 const quizQuestions = [
     ["Is the antagonist's name Gruntilda?", true],
     ["Is Banjo's sister named Tooty?", true],
     ['Is Banjo best friends with Clifford the dog?', false]
 ]
 
-
-// initialize state
-
+//runs through each of the questions and prompts the user for their anwser
 export function runQuiz(userName){
     for (let i=0; i<quizQuestions.length; i++) {
         while (!userCorrect) {

@@ -1,6 +1,7 @@
 import { finalResults } from './resultsDisplay.js';
 
 
+//scores the quiz, and returns results to user.
 export function scoreQuiz(userName, correctAnswers, wrongAnswers){
 
     if (wrongAnswers === 0) { 

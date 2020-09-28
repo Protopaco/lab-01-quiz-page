@@ -6,7 +6,9 @@ let gaveFalseName = false;
 let excited= '';
 
 
-
+//prompts user for name, and has them confirm they want to take the quiz
+//if they fail to give a name the interface gets a little more hostile
+//if they don't want to take the quiz they are forwarded to a different site.
 export function quizSetup() {
     while (userName === '' || userName === null){
         userName = prompt('What is your name?');

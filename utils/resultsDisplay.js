@@ -2,6 +2,8 @@ const message = document.getElementById('message');
 const score = document.getElementById('score');
 const results = document.getElementById('results')
 
+
+//changes the 'results' section on the website after user has finished quiz
 export function finalResults(userName, correctAnswers, wrongAnswers){
     if (wrongAnswers === 0) {
         results.classList.add('perfect');

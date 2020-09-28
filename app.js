@@ -1,11 +1,11 @@
 // import functions and grab DOM elements
-import { quizSetup } from './quizSetup.js';
-import { resetQuiz } from './resetQuiz.js';
+import { quizSetup } from './utils/quizSetup.js';
+import { resetQuiz } from './utils/resetQuiz.js';
 
 const button = document.getElementById('launch-button');
 
 
-// set event listeners to update state and DOM
+//listens for button press
 button.addEventListener('click', () => {
     resetQuiz();
     quizSetup();
