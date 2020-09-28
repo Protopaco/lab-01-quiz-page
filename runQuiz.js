@@ -2,6 +2,7 @@ import { userMeantYes } from './translateToYes.js';
 import { scoreQuiz } from './scoreQuiz.js';
 
 
+
 let correctAnswers = 0;
 let wrongAnswers = 0;
 let userCorrect = false;
@@ -20,7 +21,6 @@ export function runQuiz(userName){
     for (let i=0; i<quizQuestions.length; i++) {
         while (!userCorrect) {
             answer = userMeantYes(prompt(quizQuestions[i][0]));
-            console.log(answer);
             if (answer === quizQuestions[i][1]) {
                 correctAnswers++;
                 alert(`CORRECT! \n${userName}, you have ${correctAnswers} correct answers!`)
@@ -34,5 +34,7 @@ export function runQuiz(userName){
         userCorrect = false;
     }
     scoreQuiz(userName, correctAnswers, wrongAnswers);
+    correctAnswers = 0;
+    wrongAnswers = 0;
 }
 

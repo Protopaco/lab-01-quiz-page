@@ -1,16 +1,16 @@
 import { runQuiz } from './runQuiz.js';
 import { userMeantYes } from './translateToYes.js';
 
-const results = document.getElementById('results');
-
 let userName = '';
 let gaveFalseName = false;
 let excited= '';
 
+
+
 export function quizSetup() {
-    while (userName === '' || userName === 'null'){
+    while (userName === '' || userName === null){
         userName = prompt('What is your name?');
-        if (userName === '' || userName === 'null') {
+        if (userName === '' || userName === null) {
             alert('Nice try buddy!  \nGive me a name!')
             gaveFalseName = true;
         }
@@ -20,7 +20,8 @@ export function quizSetup() {
         alert('Thats better.');
     }
     alert(`Hello ${userName}!`);
-    results.textContent(`hi`)
+
+    
     if (gaveFalseName === true) {
     alert('If that is your real name');
     }
@@ -41,4 +42,5 @@ export function quizSetup() {
         }
     }   
     runQuiz(userName);
+    userName = '';
 }
